@@ -29,7 +29,7 @@
 
 bl_info = {
     "name":         "Apply modifier for object with shape keys",
-    "author":       "Przemysław Bągard, additonal contributions by Iszotic, updated to 2.93 by Fro Zen",
+    "author":       "Przemysław Bągard, additonal contributions by Iszotic, updated to 2.93 by Fro Zen, Tool location changed by denpakei32",
     "blender":      (2,93,0),
     "version":      (0,2,1),
     "location":     "Context menu",
@@ -287,7 +287,7 @@ class ApplyModifierForObjectWithShapeKeysOperator(bpy.types.Operator):
             self.layout.label(text="              Object contains animation data")
             self.layout.label(text="              (like drivers, keyframes etc.)")
             self.layout.label(text="              assigned to shape keys.")
-            self.layout.label(text="              Those data will be lost!")
+            self.layout.label(text="              That data will be lost!")
             self.layout.separator()
         #self.layout.prop(self, "my_enum")
         box = self.layout.box()
@@ -306,9 +306,11 @@ class ApplyModifierForObjectWithShapeKeysOperator(bpy.types.Operator):
 
 class DialogPanel(bpy.types.Panel):
     bl_idname = "OBJECT_PT_apply_modifier_for_object_with_shape_keys"
-    bl_label = "Multi Shape Keys"
-    bl_space_type = "VIEW_3D"
-    bl_region_type = "TOOLS"
+    bl_label = "Shape Keys"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = 'Tool'
+
  
     def draw(self, context):
         self.layout.operator("object.apply_modifier_for_object_with_shape_keys")
