@@ -3,11 +3,9 @@
 
 Apply modifiers and remove them from the stack for objects with shape keys. 
 (Pushing 'Apply' in the 'Object modifiers' tab results in the error 'Modifier cannot be applied to a mesh with shape keys').
+This fork changes the location of the tool to something I personally find better (the old location might've been because of 2.7x era...)
 
 ## Usage
-
-Press 'F3' and choose 'Apply modifier for object with shape keys'.
-
 ![screen](screen.png 'Addon location')
 
 ## Usage in script
